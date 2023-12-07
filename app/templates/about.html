@@ -1,0 +1,46 @@
+{% extends "based.html" %}
+
+{% block title %}
+О нас
+{% endblock %}
+{% block bootstrap %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+{% endblock %}
+{% block headerbackground %}style="background-color: #666666"{% endblock %}
+{% block content %}
+
+<div class="backgro_mh">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heding">
+           <h2>Давайте познакомимся</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- about  -->
+<div id="about" class="about">
+  <div class="container">
+    <div class="row display_boxflex">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="about-box">
+          <h2>Мы</h2>
+          <p>- Kомпания, которая занимается продюссирование музыки, её созданием и обработкой уже более 8 лет. 4 года из которых подряд у нас практически нет конкурентов в нашей сфере.</p>
+          <a href="#">Далее</a>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="about-box">
+          <figure><img src="../static/images/about.png" alt="#" /></figure>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
+{% block footerstyle %}style="margin-top: 90px"{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "based.html" %}
+
+{% block title %}
+Профиль {{ username }}
+{% endblock %}
+{% block bootstrap %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+{% endblock %}
+{% block headerbackground %}
+style="background-color: #666666"
+{% endblock %}
+{% block content %}
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="mt-5 d-flex justify-content-around">
+                    <p class="card-title fs-1">Здравствуйте, <span class="text-primary fw-bold">{{ username }}</span></p>
+                    <a class="btn btn-danger" href="{{ url_for('logout') }}">Выйти из аккаунта</a>
+                </div>
+
+                {% if current_user.is_authenticated %}
+                    <p class="mt-5 text-center fs-2 fw-bold">Ваша корзина:</p>
+                    <div class="d-flex flex-row flex-wrap m-5 mb-5 justify-content-center ">
+                        {% for service in cart %}
+                            <div class="card col-md-3 m-3 p-3">
+                                <div class="card-body flex-column justify-content-between d-flex">
+                                    <h5 class="card-title fs-4 text-primary text-uppercase fw-bold">{{ service.name }}</h5>
+                                    <p class="card-text fs-5 fw-normal text-secondary"><span class="fw-bold text-dark">Описание:</span><br> {{ service.description }}</p>
+                                    <p class="card-text fs-5 fw-bold">Цена: <span class="text-success fw-bold">{{ service.price }}</span> <span class="fw-normal"> рублей</span></p>
+                                    <form method="POST" action="{{ url_for('delete_service', product_id=service.id) }}" class="d-inline">
+                                        <button type="submit" class="btn btn-danger btn-sm">Удалить</button>
+                                    </form>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <form method="POST" action="" class="m-5">
+                        <p class="fs-2 fw-bolder">Оставить отзыв</p>
+                        <p class="fs-6 text-secondary mb-4">До 1000 символов*</p>
+                        <div class="mb-3">
+                          <label for="reviews_description" class="form-label"
+                            >Ваш отзыв</label
+                          >
+                          <textarea
+                            name="reviews_description"
+                            class="form-control"
+                            required
+                          ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Отправить</button>
+                      </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block footerstyle %}
+style="margin-top: 90px"
+{% endblock %}

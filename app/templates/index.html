@@ -1,0 +1,165 @@
+{% extends "based.html" %}
+
+{% block title %}
+Главная
+{% endblock %}
+{% block headerbackground %}style="     position: absolute;
+z-index: 999;
+width: 100%;
+padding: 30px 0px 0px 0px;"{% endblock %}
+{% block content %}
+
+<div class="header-top">
+    <!-- end header inner -->
+    <div class="overlay"></div>
+    <!-- end header -->
+    <section class="slider_section">
+     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+       <ol class="carousel-indicators">
+         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+         <li data-target="#myCarousel" data-slide-to="1"></li>
+         <li data-target="#myCarousel" data-slide-to="2"></li>
+       </ol>
+       <div class="carousel-inner">
+         <div class="carousel-item active">
+
+           <div class="container">
+             <div class="carousel-caption">
+               <div class="row">
+                 <div class="col-md-12">
+                   <div class="text-bg">
+                     <span>Лучшая</span>
+                     <h1>Студия Таганрога</h1>
+                     <p>На данный момент наша студия занимает лидирующее место по количеству клиентов на рынке. Это продолжается уже 4 год подряд. Мы рады каждому новому клиенту, так как каждый музыкант уникален</p>
+                     <a href="{{ url_for('concerts') }}">Узнать больше</a> <a href="{{ url_for('products') }}">Получить</a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="carousel-item">
+
+           <div class="container ">
+             <div class="carousel-caption">
+
+               <div class="row">
+                 <div class="col-md-12">
+                   <div class="text-bg">
+                     <span>Лучшая</span>
+                     <h1>Студия Таганрога</h1>
+                     <p>На данный момент наша студия занимает лидирующее место по количеству клиентов на рынке. Это продолжается уже 4 год подряд. Мы рады каждому новому клиенту, так как каждый музыкант уникален</p>
+                     <a href="{{ url_for('concerts') }}">Узнать больше</a> <a href="{{ url_for('products') }}">Получить</a>
+                   </div>
+                 </div>
+
+               </div>
+             </div>
+           </div>
+
+         </div>
+
+
+         <div class="carousel-item">
+
+           <div class="container">
+             <div class="carousel-caption ">
+               <div class="row">
+                 <div class="col-md-12">
+                   <div class="text-bg">
+                     <span>Лучшая</span>
+                     <h1>Студия Таганрога</h1>
+                     <p>На данный момент наша студия занимает лидирующее место по количеству клиентов на рынке. Это продолжается уже 4 год подряд. Мы рады каждому новому клиенту, так как каждый музыкант уникален</p>
+                     <a href="{{ url_for('concerts') }}">Узнать больше</a> <a href="{{ url_for('products') }}">Получить</a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+    
+     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+   <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+    
+   </a>
+   <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+       <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+     
+   </a>
+  </div>
+   
+ 
+
+</section>
+</div>
+</header>
+
+
+
+<!-- about  -->
+<div id="about" class="about">
+ <div class="container">
+   <div class="row display_boxflex">
+     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+       <div class="about-box">
+         <h2>О нас</h2>
+         <p>В нашей команде кождый специалист имеет стаж в своей коммерческой деятельности не менее 10 лет. Каждый из них подстраивается под клиента, так что разногласий не произойдет</p>
+         <a href="{{ url_for('about') }}">Читать Ещё</a>
+       </div>
+     </div>
+     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+       <div class="about-box">
+         <figure><img src="../static/images/about.png" alt="#" /></figure>
+       </div>
+     </div>
+   </div>
+
+ </div>
+</div>
+<!-- end abouts -->
+
+
+<!-- Gallery -->
+
+
+<div id="gallery" class="Gallery">
+ <div class="container"> 
+   <div class="row display_boxflex">
+     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+       <div class="row">
+         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott">
+           <div class="Gallery_img">
+             <figure><img src="../static/images/Gallery1.jpg" alt="#"/></figure>
+           </div>
+         </div>
+         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott">
+           <div class="Gallery_img">
+             <figure><img src="../static/images/Gallery2.jpg" alt="#"/></figure>
+           </div>
+         </div>
+         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 margi_bott1">
+           <div class="Gallery_img">
+             <figure><img src="../static/images/Gallery3.jpg" alt="#"/></figure>
+           </div>
+         </div>
+         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+           <div class="Gallery_img">
+             <figure><img src="../static/images/Gallery4.jpg" alt="#"/></figure>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+       <div class="Gallery_text">
+         <div class="titlepage">
+           <h2>Галерея</h2>
+         </div>
+         <p>Самые яркие моменты, которые были запечетленны теперь есть в нашей галерее. Скорее посмотри на этот шедевр!</p>
+         <a href="{{ url_for('gallery') }}">Перейти</a>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+{% endblock %}
